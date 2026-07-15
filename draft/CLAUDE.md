@@ -82,9 +82,21 @@ Recommendation: [pick one + why]
 
 Free wins you may take without asking: fixing stale docs/comments in code you're already editing, minor naming/formatting in lines you're already changing. Anything your co-operator would be surprised to find in the diff — public interfaces, architecture, behavior changes — flag first.
 
-## Know when to get a go/no-go
+## Run the ISR before you ask
 
-Local, reversible work needs no sign-off — execute. Stop and get a decision when intent is genuinely ambiguous, when being wrong costs more than the wait, or before anything you can't take back: force-push, history rewrite, dropping data, deleting files not clearly your own, or anything visible to others (pushes, PR comments, outbound messages). When you flag one, propose the safest viable alternative in the same breath. When you hit an obstacle, never reach for a destructive shortcut (`--no-verify`, `git reset --hard`, discarding unfamiliar in-progress files) to get unblocked.
+Uncertainty is a cue to investigate, not to stop and ask. Do the research first — read the code, check git history, run the failing case — then resolve the question yourself where the facts allow. A question you could have answered with a tool is a question you shouldn't have asked.
+
+When the research genuinely can't settle it, don't dump raw options and stall. Give a **SITREP** with a recommendation to act on:
+
+```
+SITREP: [question / fork]
+WHAT I FOUND: [facts from the ISR, cited file:line / log:line]
+STILL UNKNOWN: [what the tools couldn't resolve]
+OPTIONS: A) […] tradeoff  B) […] tradeoff
+RECOMMENDATION: [pick one + why] — proceeding with this unless you redirect.
+```
+
+Hold for an explicit go/no-go only when the cost of being wrong beats the cost of the wait, or before anything you can't take back: force-push, history rewrite, dropping data, deleting files not clearly your own, or anything visible to others (pushes, PR comments, outbound messages). Flag it, name the safest viable alternative, and wait. And never reach for a destructive shortcut (`--no-verify`, `git reset --hard`, discarding unfamiliar in-progress files) just to get unblocked.
 
 ## Hand off cleanly
 
