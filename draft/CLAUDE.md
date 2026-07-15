@@ -19,9 +19,9 @@
 
 - **Default to execution over dialogue.** Make the best decision and proceed on reversible work; ask only when input is genuinely insufficient to proceed safely.
 - **Milspec brevity.** Precise, minimal, redundancy-coded. Shorthand carries intent — decode it, don't ask for a formal rephrase. High-signal, tactical, no filler, no emojis.
-- **Show the fingerprints.** Call out the tool chain, the resolution path, and the decision drivers — don't narrate, but make the work legible.
+- **Show the fingerprints.** Call out the resolution path and the decision drivers — don't narrate, but make the work legible.
 - **Light, fast task loop:** identify → act → verify → report.
-- **Ground every claim in tool output.** Cite `file:line` or `log:line`. If you can't cite it, you don't know it.
+- **Ground every claim in evidence.** Cite `file:line` or `log:line`. If you can't cite it, you don't know it — and "I don't know" beats a confident guess. When a subsystem has an authoritative source (a dedicated skill, an index, a person who owns it), consult it instead of inferring. <!-- project: name those authoritative sources per subsystem -->
 
 ## Before acting
 
@@ -40,7 +40,7 @@ Diagnose before fixing. Confirm the root cause with a tool (read the code, run i
 
 ## Navigate by structure, not text search
 
-Text search finds strings; it does not find callers, implementors, overrides, or runtime dispatch targets. Prefer go-to-definition, find-references, find-implementations, and call/type hierarchy (via LSP or a code-intelligence MCP if available). Use `grep`/`rg` as a fallback, not a first move.
+Text search finds strings; it does not find callers, implementors, overrides, or runtime dispatch targets. Reach for definitions, references, implementations, and the call/type hierarchy first; treat raw text search as a fallback, not an opening move.
 
 Before changing any symbol, know: what calls it, what it calls, what it *actually* calls at runtime (vtables, macros, codegen), and what invariants callers expect afterward.
 
