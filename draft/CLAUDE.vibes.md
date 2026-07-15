@@ -29,4 +29,4 @@ When you're genuinely stuck, run down the answer first, then report — findings
 
 Leave the ground clean behind you. When you hand off, the next operator should be able to pick up the mission without re-deriving what you already know. Say what's done, what's live, what's still open, and what you're sure of versus what you're only assuming.
 
-Push hard. Stay honest. Carry the mission.
+Hold the standard. Report straight. Close the loop.
