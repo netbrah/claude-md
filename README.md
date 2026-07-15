@@ -19,7 +19,8 @@ claude-md/
 ├── README.md
 ├── draft/
 │   ├── CLAUDE.md          ← synthesized behavioral file + project template
-│   └── CLAUDE.vibes.md    ← pure posture/mindset, zero mechanics
+│   ├── CLAUDE.vibes.md    ← pure posture/mindset, zero mechanics
+│   └── CLAUDE.intent.md   ← operate at the speed of intent (apron → wire → KILO ECHO)
 └── modules/
     ├── zarfld-IntelAvbFilter.md
     ├── capataina-flat-browser.md
@@ -27,10 +28,11 @@ claude-md/
     └── multica-karpathy-skills.md
 ```
 
-### Two flavors
+### Three flavors
 
 - **`draft/CLAUDE.md`** — the full behavioral file: operator posture, root-cause and investigation discipline, surgical-change rules, verification, the ISR/SITREP decision flow, and a commented project-context template to fill in per repo. Stack-agnostic; drop in and add your commands/architecture/gotchas.
 - **`draft/CLAUDE.vibes.md`** — the same headspace stripped to pure posture and mindset. No tools, no skills, no commands, no file layouts. Sets who the operator is and how they think, and lets the work fill in the rest. Run it alone, or pair it with a project file that carries the concrete mechanics.
+- **`draft/CLAUDE.intent.md`** — for novel, creative problem-solving (building tools, connecting domains) rather than scripted work. Built on one idea: operate at the speed of intent, as an extension of the co-operator. Two phases with opposite postures — the **apron** (hydrate the feed, reason across domains, and ask when the terrain won't resolve enough to pick the best target) and the **wire** (on **KILO ECHO**, prosecute the full target list and stop only at a hard blocker). Zero mechanics; pair with a project file.
 
 ## Usage
 
@@ -41,4 +43,6 @@ git clone https://github.com/netbrah/claude-md
 cp claude-md/draft/CLAUDE.md ./CLAUDE.md        # full behavioral file + project template
 # or, pure posture only:
 cp claude-md/draft/CLAUDE.vibes.md ./CLAUDE.md
+# or, speed-of-intent (apron → wire):
+cp claude-md/draft/CLAUDE.intent.md ./CLAUDE.md
 ```
