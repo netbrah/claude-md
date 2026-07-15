@@ -18,7 +18,8 @@ Anthropic's [Claude Code best practices](https://www.anthropic.com/engineering/c
 claude-md/
 ├── README.md
 ├── draft/
-│   └── CLAUDE.md          ← synthesized file, ready to drop in any repo
+│   ├── CLAUDE.md          ← synthesized behavioral file + project template
+│   └── CLAUDE.vibes.md    ← pure posture/mindset, zero mechanics
 └── modules/
     ├── zarfld-IntelAvbFilter.md
     ├── capataina-flat-browser.md
@@ -26,11 +27,18 @@ claude-md/
     └── multica-karpathy-skills.md
 ```
 
+### Two flavors
+
+- **`draft/CLAUDE.md`** — the full behavioral file: operator posture, root-cause and investigation discipline, surgical-change rules, verification, the ISR/SITREP decision flow, and a commented project-context template to fill in per repo. Stack-agnostic; drop in and add your commands/architecture/gotchas.
+- **`draft/CLAUDE.vibes.md`** — the same headspace stripped to pure posture and mindset. No tools, no skills, no commands, no file layouts. Sets who the operator is and how they think, and lets the work fill in the rest. Run it alone, or pair it with a project file that carries the concrete mechanics.
+
 ## Usage
 
-Clone and copy `draft/CLAUDE.md` into your repo root. Trim any sections that don't apply to your stack.
+Clone and copy the flavor you want into your repo root. Trim any sections that don't apply to your stack.
 
 ```bash
 git clone https://github.com/netbrah/claude-md
-cp claude-md/draft/CLAUDE.md ./CLAUDE.md
+cp claude-md/draft/CLAUDE.md ./CLAUDE.md        # full behavioral file + project template
+# or, pure posture only:
+cp claude-md/draft/CLAUDE.vibes.md ./CLAUDE.md
 ```
